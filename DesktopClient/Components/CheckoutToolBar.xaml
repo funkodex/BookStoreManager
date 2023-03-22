@@ -1,0 +1,20 @@
+﻿<UserControl x:Class="DesktopClient.Components.CheckoutToolBar"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:md="http://materialdesigninxaml.net/winfx/xaml/themes"
+             xmlns:local="clr-namespace:DesktopClient.Components"
+             mc:Ignorable="d" 
+             >
+    <ToolBarTray IsLocked="True" >
+        <ToolBar Grid.Row="0" Style="{StaticResource MaterialDesignToolBar}" >
+            <Button Content="{md:PackIcon Kind=AddCircleOutline,Size=30}"></Button>
+            <Button Content="{md:PackIcon Kind=RemoveCircleOutline,Size=30}"></Button>
+            <Button Content="{md:PackIcon Kind=ContentCopy,Size=30}"></Button>
+            <Button Content="{md:PackIcon Kind=ContentPaste,Size=30}"></Button>
+            <Button Content="{md:PackIcon Kind=ViewGrid,Size=30}"></Button>
+            <Button Content="{md:PackIcon Kind=ViewListOutline,Size=30}"></Button>
+        </ToolBar>
+    </ToolBarTray>
+</UserControl>

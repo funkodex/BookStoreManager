@@ -1,0 +1,56 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Audit.EntityFramework.Core" Version="19.0.5" />
+    <PackageReference Include="Audit.EntityFramework.Identity.Core" Version="19.0.5" />
+    <PackageReference Include="Audit.NET" Version="19.0.5" />
+    <PackageReference Include="Audit.WebApi.Core" Version="19.0.5" />
+    <PackageReference Include="EFCore.BulkExtensions.MySql" Version="7.0.1" />
+    <PackageReference Include="EFCore.NamingConventions" Version="7.0.2" />
+    <PackageReference Include="EntityFramework" Version="6.4.4" />
+    <PackageReference Include="libphonenumber-csharp" Version="8.12.43" />
+    
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.3" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="7.0.3">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="7.0.3" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="7.0.3">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Pomelo.EntityFrameworkCore.MySql" Version="7.0.0" />
+	<PackageReference Include="Mapster" Version="7.2.0" />
+  </ItemGroup>
+
+	<ItemGroup>
+		<Generated Include="**\*.g.cs" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Folder Include="Mappers\" />
+	  <Folder Include="Migrations\" />
+	</ItemGroup>
+
+
+
+	
+	<Target Name="CleanGenerated">
+		<Delete Files="@(Generated)" />
+	</Target>
+
+	<!--<Target Name="Mapster" AfterTargets="AfterBuild">
+--><!--		<Exec WorkingDirectory="$(ProjectDir)" Command="dotnet tool restore" />--><!--
+        <Exec WorkingDirectory="$(ProjectDir)" Command="Mapster-Tool-dotnet-6 model -a &quot;$(TargetDir)$(ProjectName).dll&quot; -o &quot;$(ProjectDir)/Models/Dtos&quot; -n &quot;$(ProjectName).Models.Dtos&quot; " />
+        <Exec WorkingDirectory="$(ProjectDir)" Command="Mapster-Tool-dotnet-6 extension -a &quot;$(TargetDir)$(ProjectName).dll&quot; -o &quot;$(ProjectDir)/Extentions/Mappers&quot; -n &quot;$(ProjectName).Extentions.Mappers&quot;" />
+        <Exec WorkingDirectory="$(ProjectDir)" Command="Mapster-Tool-dotnet-6 mapper -a &quot;$(TargetDir)$(ProjectName).dll&quot;  -o &quot;$(ProjectDir)/Mappers&quot; -n &quot;$(ProjectName).Mappers&quot;" />
+	</Target>-->
+
+</Project>
